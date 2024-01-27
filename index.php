@@ -3,26 +3,34 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+     <title>Login Form</title> 
     <link rel="stylesheet" href="login.css">
-</head>
-<body>
-<div class="login-container">
-<h2>Login</h2>
-    <form action="login.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" required><br>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="title"><span>Login Form</span></div>
+        <form action="#">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" required>
+          </div>
+          <div class="row">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" required>
+          </div>
+          <div class="pass"><a href="#">Forgot password?</a></div>
+          <div class="row button">
+            <input type="submit" value="Login">
+          </div>
+        </form>
+      </div>
+    </div>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" required><br>
-
-        <input type="submit" value="Login">
-    </form>
-</div>
-</body>
-</html>
+  </body>
 </html>
