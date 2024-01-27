@@ -1,29 +1,33 @@
 <?php
-
-if (isset($_POST['admin_login'])) {
-    // Login as Admin
-    $user_type = 'admin';
-} elseif (isset($_POST['guest_login'])) {
-    // Login as Guest
-    $user_type = 'guest';
-} else {
-    // Redirect to login page if no button is clicked
-    header("Location: index.php");
-    exit();
+// Fungsi untuk memeriksa login admin
+function adminLogin($username, $password) {
+    // Gantilah ini dengan logika pemeriksaan login admin sesuai kebutuhan
+    return $username === 'admin' && $password === 'admin';
 }
 
-// Set user type in session (you might want to use a more secure method in a real application)
-session_start();
-$_SESSION['user_type'] = $user_type;
-
-// Redirect to the appropriate page based on user type
-if ($user_type === 'admin') {
-    header("Location: admin.php");
-} elseif ($user_type === 'guest') {
-    header("Location: user.php");
-} else {
-    // Redirect to login page if something unexpected happens
-    header("Location: index.php");
+// Fungsi untuk memeriksa login user
+function userLogin($username, $password) {
+    // Gantilah ini dengan logika pemeriksaan login user sesuai kebutuhan
+    return $username === 'user' && $password === 'user';
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+     // Pemeriksaan login admin
+     if (adminLogin($username, $password)) {
+        header("Location: admin.php");
+        exit();
+    } 
+    // Pemeriksaan login user
+    elseif (userLogin($username, $password)) {
+        header("Location: user.php");
+        exit();
+    } 
+    // Jika login gagal
+    else {
+        echo "Login gagal. Silakan coba lagi.";
+    }
+}
 ?>

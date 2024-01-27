@@ -13,14 +13,15 @@
 <body>
 <div class="login-container">
 <h2>Login</h2>
-<form action="login.php" method="post">
-<div class="input-group">
-    <button type="submit" name="admin_login" value="Login as Admin">Login as Admin</buttton>
-</div>
-<div class="input-group">
-    <button type="submit" name="guest_login" value="Login as Dosen/Mahasiswa">Login as Dosen/Mahasiswa</button>
-</div>
-</form>
+    <form action="login.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+
+        <input type="submit" value="Login">
+    </form>
 </div>
 </body>
 </html>
