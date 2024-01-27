@@ -32,6 +32,7 @@ body {
   
   .input-group {
   margin-bottom: 30px;
+  margin-right: 15px;
   width: 300px; 
 }
 
@@ -43,6 +44,8 @@ label {
 input {
   width: 100%;
   padding: 10px;
+  margin-bottom: 15px;
+  margin-right: 40px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -50,10 +53,8 @@ input {
 button {
   width: 95%;
   padding: 10px;
-  padding-bottom: .9rem;
-  padding-top: .9rem;
   border: none;
-  border-radius: 3px;
+  border-radius: 10px;
   background-color: wheat;
   cursor: pointer;
   font-size: 1rem;
