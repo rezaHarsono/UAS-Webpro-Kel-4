@@ -71,7 +71,14 @@ if (!$result) {
       </tbody>
     </table>
   </div>
+
+  <footer class="bg-[#073B3A] w-full sm:text-center">
+    <div class="w-full mx-auto max-w-screen-xl p-3 md:flex md:items-center md:justify-between">
+      <div class="text-xs text-[#E7F6F2]"> TEKNIK INFORMATIKA DAN KOMPUTER, POLITEKNIK NEGERI JAKARTA</div>
+</footer>
+
 </body>
+
 
 </html>
 
