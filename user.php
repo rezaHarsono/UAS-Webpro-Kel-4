@@ -44,8 +44,6 @@ if (!$result) {
 <body>
   <div class="navbar">
     <h2 class="user-title">User</h2>
-    
-  
     <button class="logoutbtn">
       <a class="logout" href="logout.php">LogOut</a>
     </button>
