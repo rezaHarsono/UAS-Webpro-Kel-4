@@ -17,17 +17,34 @@ if (!$result) {
     <link rel="stylesheet" href="admin.css">
     <title>Admin</title>
 
-    <style>
-        table,
-        th,
-        td {
+    <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="user.css">
+  <title>User</title>
+
+  <style>
+        table {
             margin: auto;
             margin-top: 50px;
-            border: 1px solid black;
+            margin-bottom: 50px;
             border-collapse: collapse;
-            padding: 15px;
+            border-radius: 0 0 10px 10px;
+            width: 80%;
+        }
+
+        th, td{
+            border: 2px solid black;
+            padding: 13px;
             text-align: center;
         }
+
+        th{
+            background-color: #073B3A;
+            color: white;
+        }
+
+
     </style>
 </head>
 
@@ -43,6 +60,10 @@ if (!$result) {
                 <a href="#">GEDUNG AA</a>
             </div>
         </div>
+    </div>
+
+    <div class="title">
+        JADWAL RUANGAN KELAS PROGRAM STUDI TIK
     </div>
 
     <div>

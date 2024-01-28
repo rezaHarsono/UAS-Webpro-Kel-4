@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .navbar {
@@ -13,8 +13,11 @@ body {
     align-items: center;
 }
 
-.admin-title {
+.title{
+    text-align: center;
+}
 
+.admin-title {
     margin-left: 20px;
 }
 
@@ -57,7 +60,6 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 
 footer {
     background-color: #073B3A;
