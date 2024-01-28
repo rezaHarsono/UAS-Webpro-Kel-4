@@ -1,6 +1,31 @@
 <?php
 include_once('conn.php');
+
+// Tambahkan filter ruangan jika dipilih
+$filter_ruangan = isset($_GET['ruangan']) ? $_GET['ruangan'] : '';
+$search_query_ruangan = isset($_GET['searchRuangan']) ? $_GET['searchRuangan'] : '';
+$search_query_hari = isset($_GET['searchHari']) ? $_GET['searchHari'] : '';
+
+// Modifikasi query SQL dengan filter ruangan dan pencarian
 $query = "SELECT * FROM display_jadwal";
+if (!empty($filter_ruangan)) {
+  $query .= " WHERE Ruangan LIKE '%$filter_ruangan%'";
+  if ($filter_ruangan == 'all') {
+    $query = "SELECT * FROM display_jadwal";
+  }
+}
+
+if (!empty($search_query_ruangan)) {
+  $query .= (!empty($filter_ruangan)) ? " AND" : " WHERE";
+  $query .= " Ruangan LIKE '%$search_query_ruangan%'";
+}
+
+
+if (!empty($search_query_hari)) {
+  $query .= (!empty($search_query_ruangan)) ? " AND" : " WHERE";
+  $query .= " Hari LIKE '%$search_query_hari%'";
+}
+
 $result = mysqli_query($conn, $query);
 
 if (!$result) {
@@ -17,7 +42,7 @@ if (!$result) {
   <link rel="stylesheet" href="user.css">
   <title>User</title>
 
-    <style>
+  <style>
     table {
       margin: auto;
       margin-top: 50px;
@@ -38,22 +63,39 @@ if (!$result) {
       background-color: #073B3A;
       color: white;
     }
-    </style>
-  </head>
+  </style>
+</head>
 
 <body>
   <div class="navbar">
     <h2 class="user-title">User</h2>
-    
-  
-    <button class="logoutbtn">
-      <a class="logout" href="logout.php">LogOut</a>
-    </button>
+    <button class="btn btn-primary logoutbtn"><a class="logout" href="logout.php">LogOut</a></button>
   </div>
 
   <div class="title">
     JADWAL RUANGAN KELAS PROGRAM STUDI TIK
   </div>
+
+  <div class="filter">
+    <form method="GET" action="">
+      <label for="ruangan">Filter Ruangan:</label>
+      <select name="ruangan" id="ruangan">
+        <option value="all">SHOW ALL</option>
+        <option value="GSG">Ruangan GSG</option>
+        <option value="AA">Ruangan AA</option>
+        <!-- Add other options as needed -->
+      </select>
+
+      <label for="searchRuangan">Cari Nomor Ruangan:</label>
+      <input type="text" name="searchRuangan" id="searchRuangan">
+
+      <label for="searchHari">Cari Hari:</label>
+      <input type="text" name="searchHari" id="searchHari">
+
+      <button type="submit">Cari</button>
+    </form>
+  </div>
+
 
   <div>
     <table id="jadwal_ruangan" class="jadwal">
@@ -70,16 +112,16 @@ if (!$result) {
         </tr>
         <?php
         while ($row = mysqli_fetch_assoc($result)) { ?>
-        <tr>
-          <td><?php echo $row['Ruangan']; ?></td>
-          <td><?php echo $row['Nama Dosen']; ?></td>
-          <td><?php echo $row['Mata Kuliah']; ?></td>
-          <td><?php echo $row['Kelas']; ?></td>
-          <td><?php echo $row['Smt']; ?></td>
-          <td><?php echo $row['Jam Mulai']; ?></td>
-          <td><?php echo $row['Jam Akhir']; ?></td>
-          <td><?php echo $row['Hari']; ?></td>
-        </tr>
+          <tr>
+            <td><?php echo $row['Ruangan']; ?></td>
+            <td><?php echo $row['Nama Dosen']; ?></td>
+            <td><?php echo $row['Mata Kuliah']; ?></td>
+            <td><?php echo $row['Kelas']; ?></td>
+            <td><?php echo $row['Smt']; ?></td>
+            <td><?php echo $row['Jam Mulai']; ?></td>
+            <td><?php echo $row['Jam Akhir']; ?></td>
+            <td><?php echo $row['Hari']; ?></td>
+          </tr>
         <?php } ?>
       </tbody>
     </table>

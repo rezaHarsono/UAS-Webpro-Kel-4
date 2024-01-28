@@ -1,40 +1,99 @@
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar {
-    background-color: #073B3A;
-    padding: 15px;
-    border-radius: 0 0 20px 20px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background-color: #073b3a;
+  padding: 15px;
+  border-radius: 0 0 20px 20px; /* Rounded corners at the top */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
-    margin-top: 15px;
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
+  margin-top: 15px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .user-title {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
-
-
 .logoutbtn {
-    background-color: #073B3A;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid white;
-    cursor: pointer;
+  background-color: #073b3a;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid white;
+  margin-left: 500px;
+  right: 100px;
+}
+
+.filter {
+  margin-left: 20%;
+  margin-top: 50px;
 }
 
 .logout {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.dropbtn {
+  background-color: #073b3a;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #3aa372;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #3a8794;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.footer {
+  display: flex;
+  background-color: #073b3a;
+  width: 100%;
+  text-align: center;
+  color: #e7f6f2;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-radius: 20px 20px 0 0;
+  height: 40px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  justify-content: center;
 }
