@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     // Jika login gagal
     else {
-        echo "Login gagal. Silakan coba lagi.";
+        header("Location: index.php?error=Incorrect Password or Username");
+        exit();
     }
 }
