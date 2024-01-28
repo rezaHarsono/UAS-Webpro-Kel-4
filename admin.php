@@ -61,6 +61,7 @@ if (!$result) {
 
   <div class="navbar">
     <h2 class="admin-title">Admin</h2>
+    
     <button class="logoutbtn">
         <a class="logout" href="logout.php">LogOut</a></button>
   </div>
