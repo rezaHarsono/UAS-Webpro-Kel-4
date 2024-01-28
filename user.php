@@ -4,7 +4,7 @@ $query = "SELECT * FROM display_jadwal";
 $result = mysqli_query($conn, $query);
 
 if (!$result) {
-    die("Query gagal: " . mysqli_error($conn));
+  die("Query gagal: " . mysqli_error($conn));
 }
 ?>
 
@@ -18,33 +18,34 @@ if (!$result) {
   <title>User</title>
 
   <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="user.css">
-  <title>User</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user.css">
+    <title>User</title>
 
-  <style>
-        table {
-            margin: auto;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            border-collapse: collapse;
-            border-radius: 0 0 10px 10px;
-            width: 80%;
-        }
+    <style>
+      table {
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-collapse: collapse;
+        border-radius: 0 0 10px 10px;
+        width: 80%;
+      }
 
-        th, td{
-            border: 2px solid black;
-            padding: 13px;
-            text-align: center;
-        }
+      th,
+      td {
+        border: 2px solid black;
+        padding: 13px;
+        text-align: center;
+      }
 
-        th{
-            background-color: #073B3A;
-            color: white;
-        }
+      th {
+        background-color: #073B3A;
+        color: white;
+      }
     </style>
-</head>
+  </head>
 
 <body>
   <div class="navbar">
@@ -58,10 +59,10 @@ if (!$result) {
       </div>
     </div>
   </div>
-  
+
   <div class="title">
-        JADWAL RUANGAN KELAS PROGRAM STUDI TIK
-    </div>
+    JADWAL RUANGAN KELAS PROGRAM STUDI TIK
+  </div>
 
   <div>
     <table id="jadwal_ruangan" class="jadwal">
@@ -76,26 +77,44 @@ if (!$result) {
           <th>HARI</th>
         </tr>
         <?php
-                while ($row = mysqli_fetch_assoc($result)) { ?>
-        <tr>
-          <td><?php echo $row['Ruangan']; ?></td>
-          <td><?php echo $row['Nama Dosen']; ?></td>
-          <td><?php echo $row['Kelas']; ?></td>
-          <td><?php echo $row['Smt']; ?></td>
-          <td><?php echo $row['Jam Mulai']; ?></td>
-          <td><?php echo $row['Jam Akhir']; ?></td>
-          <td><?php echo $row['Hari']; ?></td>
-        </tr>
+        while ($row = mysqli_fetch_assoc($result)) { ?>
+          <tr>
+            <td>
+              <?php echo $row['Ruangan']; ?>
+            </td>
+            <td>
+              <?php echo $row['Nama Dosen']; ?>
+            </td>
+            <td>
+              <?php echo $row['Kelas']; ?>
+            </td>
+            <td>
+              <?php echo $row['Smt']; ?>
+            </td>
+            <td>
+              <?php echo $row['Jam Mulai']; ?>
+            </td>
+            <td>
+              <?php echo $row['Jam Akhir']; ?>
+            </td>
+            <td>
+              <?php echo $row['Hari']; ?>
+            </td>
+          </tr>
         <?php } ?>
       </tbody>
     </table>
   </div>
-
-  <footer class="bg-[#073B3A] w-full sm:text-center">
-    <div class="w-full mx-auto max-w-screen-xl p-3 md:flex md:items-center md:justify-between">
-      <div class="text-xs text-[#E7F6F2]"> TEKNIK INFORMATIKA DAN KOMPUTER, POLITEKNIK NEGERI JAKARTA</div>
-</footer>
-
+  <div class="footer">
+    <footer>
+      <div>
+        <div class="text-xs text-[#E7F6F2]"> TEKNIK INFORMATIKA DAN KOMPUTER
+        </div>
+        <div style="padding: 10px">
+          POLITEKNIK NEGERI JAKARTA
+        </div>
+    </footer>
+  </div>
 </body>
 
 

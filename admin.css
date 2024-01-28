@@ -61,16 +61,17 @@ body {
     display: block;
 }
 
-footer {
+.footer {
+    display: flex;
     background-color: #073B3A;
     width: 100%;
     text-align: center;
     color: #E7F6F2;
-    padding: 10px;
-    bottom: 0;
-    border-top-left-radius: 40px; /* Rounded on top left */
-    border-top-right-radius: 40px; /* Rounded on top right */
-    height: 20px; /* Adjust the height as needed */
-    font-family: 'Arial', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border-radius: 20px 20px 0 0; 
+    height: 40px; 
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
   }
 
