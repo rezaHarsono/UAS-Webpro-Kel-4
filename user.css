@@ -27,6 +27,20 @@ body {
     margin-left: 20px;
 }
 
+.logoutbtn{
+    background-color: #073B3A; 
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid white;
+    position: relative;
+    margin-left: 1450px;
+}
+
+.logout{
+    color: white;
+    text-decoration: none;
+}
+
 /* Dropdown styles */
 .dropdown {
     position: relative;
