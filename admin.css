@@ -6,7 +6,7 @@ body {
 .navbar {
     background-color: #073B3A;
     padding: 15px;
-    border-radius: 0 0 20px 20px; /* Rounded corners at the top */
+    border-radius: 0 0 20px 20px;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -24,59 +24,21 @@ body {
     margin-left: 20px;
 }
 
-.logoutbtn{
-    background-color: #073B3A; 
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid white;
-    position: relative;
-    margin-left: 1450px;
-}
-
-.logout{
-    color: white;
-    text-decoration: none;
-}
-
-/* Dropdown styles */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin-right: 20px; 
-}
-
-.dropbtn {
-    background-color: #073B3A; 
-    color: white;
+.logoutbtn {
+    background-color: #073B3A;
     padding: 10px;
     font-size: 16px;
     border: 1px solid white;
     cursor: pointer;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #3aa372; 
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
+.logout {
     color: white;
-    padding: 12px 16px;
     text-decoration: none;
-    display: block;
 }
 
-.dropdown-content a:hover {
-    background-color: #3a8794;
-}
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+
 
 .footer {
     display: flex;
@@ -91,5 +53,6 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     justify-content: center;
+    display: flex;
   }
 
