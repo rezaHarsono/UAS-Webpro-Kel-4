@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <select name="nama_ruangan" required>
       <?php
       // Fetch options for ruangan from the database
-      $ruanganQuery = "SELECT DISTINCT id AS 'NAMA RUANGAN' FROM ruangan";
+      $ruanganQuery = "SELECT DISTINCT id AS 'NAMA RUANGAN' FROM ruangan ORDER BY id";
       $ruanganResult = mysqli_query($conn, $ruanganQuery);
       while ($ruanganRow = mysqli_fetch_assoc($ruanganResult)) {
         $selected = ($ruanganRow['NAMA RUANGAN'] == $row['NAMA RUANGAN']) ? 'selected' : '';
@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <select name="nama_dosen" required>
       <?php
       // Fetch options for dosen from the database
-      $dosenQuery = "SELECT DISTINCT d.nama AS 'NAMA DOSEN', d.id AS 'ID DOSEN' FROM dosen d JOIN jadwal j ON d.id = j.id_dosen";
+      $dosenQuery = "SELECT DISTINCT nama AS 'NAMA DOSEN', id AS 'ID DOSEN' FROM dosen ORDER BY nama";
       $dosenResult = mysqli_query($conn, $dosenQuery);
       while ($dosenRow = mysqli_fetch_assoc($dosenResult)) {
         $selected = ($dosenRow['NAMA DOSEN'] == $row['NAMA DOSEN']) ? 'selected' : '';
@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <select name="nama_matkul" required>
       <?php
       // Fetch options for dosen from the database
-      $matkulQuery = "SELECT DISTINCT m.nama AS 'NAMA MATKUL', m.id AS 'ID MATKUL' FROM mata_kuliah m JOIN jadwal j ON m.id = j.id_matkul";
+      $matkulQuery = "SELECT DISTINCT nama AS 'NAMA MATKUL', id AS 'ID MATKUL' FROM mata_kuliah ORDER BY nama";
       $matkulResult = mysqli_query($conn, $matkulQuery);
       while ($matkulRow = mysqli_fetch_assoc($matkulResult)) {
         $selected = ($matkulRow['NAMA MATKUL'] == $row['NAMA MATKUL']) ? 'selected' : '';
@@ -93,11 +93,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <select name="id_kelas" required>
       <?php
       // Fetch options for kelas from the database
-      $kelasQuery = "SELECT DISTINCT id_kelas FROM jadwal";
+      $kelasQuery = "SELECT DISTINCT id AS 'ID KELAS', CONCAT(nama, ' ',semester) AS 'NAMA KELAS' FROM kelas ORDER BY id";
       $kelasResult = mysqli_query($conn, $kelasQuery);
       while ($kelasRow = mysqli_fetch_assoc($kelasResult)) {
-        $selected = ($kelasRow['id_kelas'] == $row['id_kelas']) ? 'selected' : '';
-        echo "<option value='{$kelasRow['id_kelas']}' $selected>{$kelasRow['id_kelas']}</option>";
+        $selected = ($kelasRow['NAMA KELAS'] == $row['NAMA KELAS']) ? 'selected' : '';
+        echo "<option value='{$kelasRow['ID KELAS']}' $selected>{$kelasRow['NAMA KELAS']}</option>";
       }
       ?>
     </select><br>
