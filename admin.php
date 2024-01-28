@@ -109,7 +109,7 @@ if (!$result) {
     <div class="footer">
         <footer>
             <div>
-                <div class="text-xs text-[#E7F6F2]"> TEKNIK INFORMATIKA DAN KOMPUTER
+                <div> TEKNIK INFORMATIKA DAN KOMPUTER
                 </div>
                 <div style="padding: 10px">
                 POLITEKNIK NEGERI JAKARTA
