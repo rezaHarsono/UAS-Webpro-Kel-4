@@ -72,7 +72,6 @@ if (!$result) {
     <button class="logoutbtn">
       <a class="logout" href="logout.php">LogOut</a>
     </button>
-    >>>>>>> eed5584dc1bc14574bb4b6575304db3e7d82d322
   </div>
 
   <div class="title">
