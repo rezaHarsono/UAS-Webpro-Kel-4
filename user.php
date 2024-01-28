@@ -24,26 +24,26 @@ if (!$result) {
     <title>User</title>
 
     <style>
-      table {
-        margin: auto;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        border-collapse: collapse;
-        border-radius: 0 0 10px 10px;
-        width: 80%;
-      }
+    table {
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      border-collapse: collapse;
+      border-radius: 0 0 10px 10px;
+      width: 80%;
+    }
 
-      th,
-      td {
-        border: 2px solid black;
-        padding: 13px;
-        text-align: center;
-      }
+    th,
+    td {
+      border: 2px solid black;
+      padding: 13px;
+      text-align: center;
+    }
 
-      th {
-        background-color: #073B3A;
-        color: white;
-      }
+    th {
+      background-color: #073B3A;
+      color: white;
+    }
     </style>
   </head>
 
@@ -71,6 +71,7 @@ if (!$result) {
         <tr>
           <th>RUANGAN</th>
           <th>NAMA DOSEN</th>
+          <th>MATA KULIAH</th>
           <th>KELAS</th>
           <th>SEMESTER</th>
           <th>JAM MULAI</th>
@@ -79,29 +80,16 @@ if (!$result) {
         </tr>
         <?php
         while ($row = mysqli_fetch_assoc($result)) { ?>
-          <tr>
-            <td>
-              <?php echo $row['Ruangan']; ?>
-            </td>
-            <td>
-              <?php echo $row['Nama Dosen']; ?>
-            </td>
-            <td>
-              <?php echo $row['Kelas']; ?>
-            </td>
-            <td>
-              <?php echo $row['Smt']; ?>
-            </td>
-            <td>
-              <?php echo $row['Jam Mulai']; ?>
-            </td>
-            <td>
-              <?php echo $row['Jam Akhir']; ?>
-            </td>
-            <td>
-              <?php echo $row['Hari']; ?>
-            </td>
-          </tr>
+        <tr>
+          <td><?php echo $row['Ruangan']; ?></td>
+          <td><?php echo $row['Nama Dosen']; ?></td>
+          <td><?php echo $row['Mata Kuliah']; ?></td>
+          <td><?php echo $row['Kelas']; ?></td>
+          <td><?php echo $row['Smt']; ?></td>
+          <td><?php echo $row['Jam Mulai']; ?></td>
+          <td><?php echo $row['Jam Akhir']; ?></td>
+          <td><?php echo $row['Hari']; ?></td>
+        </tr>
         <?php } ?>
       </tbody>
     </table>
