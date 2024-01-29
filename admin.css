@@ -26,6 +26,7 @@ body {
 }
 
 .logoutbtn {
+    width: fit-content;
     background-color: #073B3A;
     padding: 10px;
     font-size: 16px;

@@ -41,6 +41,7 @@ if (!$result) {
 
   .btn-tambah {
     font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
     border: none;
     color: white;
     background-color: #75c4d2;
