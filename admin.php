@@ -44,8 +44,8 @@ if (!$result) {
     border: none;
     color: white;
     background-color: #75c4d2;
+    margin-left: 5px;
     padding: 10px;
-    margin-left: 48%;
     margin-top: 10px;
   }
 
@@ -67,10 +67,10 @@ if (!$result) {
   </div>
 
   <div class="title">
-    JADWAL RUANGAN KELAS PROGRAM STUDI TIK
+    JADWAL RUANGAN KELAS JURUSAN TIK
   </div>
-  <div class="caption">Klik tambah untuk menambahkan data ruangan kelas:</div>
-  <button class="btn-tambah"><a href="tambah.php">Tambah</a></button>
+  <div class="caption">Klik tambah untuk menambahkan data ruangan kelas:
+  <button class="btn-tambah"><a href="tambah.php">Tambah</a></button></div>
   <div>
     <table id="jadwal_ruangan" class="jadwal">
       <tbody>

@@ -75,7 +75,7 @@ if (!$result) {
   </div>
 
   <div class="title">
-    JADWAL RUANGAN KELAS PROGRAM STUDI TIK
+    JADWAL RUANGAN KELAS JURUSAN TIK
   </div>
 
   <div class="filter">
@@ -85,7 +85,6 @@ if (!$result) {
         <option value="all">SHOW ALL</option>
         <option value="GSG">Ruangan GSG</option>
         <option value="AA">Ruangan AA</option>
-        <!-- Add other options as needed -->
       </select>
 
       <label for="searchRuangan">Cari Nomor Ruangan:</label>
