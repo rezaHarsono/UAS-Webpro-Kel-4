@@ -78,7 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     .label {
-      
       margin-top: 10px;
       font-weight: bold;
     }
